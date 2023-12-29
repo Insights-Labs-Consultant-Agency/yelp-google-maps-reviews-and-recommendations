@@ -1,16 +1,17 @@
 import google.generativeai as genai
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import streamlit as st
 import os
 from PIL import Image
 
 
-load_dotenv()  # Load environment variables from .env.
+# load_dotenv()  # Load environment variables from .env.
 
 
-os.getenv("GOOGLE_API_KEY")
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+# os.getenv("GOOGLE_API_KEY")
+# genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
+genai.configure(api_key=st.secrets["google"]["api_key"])
 
 # Function to load OpenAI model and get respones
 
