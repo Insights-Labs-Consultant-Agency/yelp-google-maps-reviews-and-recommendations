@@ -1,6 +1,6 @@
 # YOOGLE 
 
-En este proyecto nuestra empresa Insights Labs se ha encargado de realizar un análisis de mercado y de permitir el acceso a información importante para el conglomerado conformado por: evegan, Veggie-Grill y    . Todo esto con la finalidad de proporcionar los argumentos necesarios para realizar un plan de expansión eficiente y de bajo riesgo.
+En este proyecto nuestra empresa Insights Labs se ha encargado de realizar un análisis de mercado y de permitir el acceso a información importante para el conglomerado conformado por: evegan, Veggie-Grill y nuvegan. Todo esto con la finalidad de proporcionar los argumentos necesarios para realizar un plan de expansión eficiente y de bajo riesgo.
 
 Por ahora el proyecto se encuentra en fase de desarrollo, a continuación te dejo los datos sobre las diferentes ramas que podrás encontrar:
 
