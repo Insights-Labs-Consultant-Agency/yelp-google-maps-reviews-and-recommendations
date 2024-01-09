@@ -126,6 +126,31 @@ La importancia y relevancia de este proyecto radica en que se busca aportar al c
 ## Alcance
 
 ### Alcance Temporal
+El proyecto se estructuro en tres Sprint, en un período de tres semanas totales, comenzando el 2 enero de 2024. Durante este tiempo, se realizaron análisis de los datos de Google Maps y Yelp. Se llevaron a cabo análisis georreferenciales para rastrear la popularidad y ubicación de las franquicias del cliente.
+Los Sprint se distribuyeron de la siguiente manera:
+
+📜 Sprint #1: Puesta en marcha del proyecto y Trabajo con Datos (Semana 1)
+
+Entendimiento de la Situación Actual: Análisis de la temática y los datos disponibles.
+Objetivos: Definición de objetivos concretos y KPIs asociados.
+Alcance: Delimitación del trabajo y definición de tareas fuera de alcance.
+Repositorio Github: Creación del repositorio colaborativo en Github.
+Solución Propuesta: Detallar tareas, productos y metodologías a utilizar.
+Análisis Preliminar de Calidad de Datos: Metadatos y análisis detallado sobre los datos disponibles.
+Hitos y Entregables: 3 KPIs, Documentación de alcance, EDA de los datos, Implementación del stack tecnológico, Metodología de trabajo, Diseño detallado, Equipo de trabajo - Roles y responsabilidades, Cronograma - Gantt, Análisis preliminar de calidad de datos.
+👨‍💻 Sprint #2: Data Engineering (Semana 2)
+
+ETL y Modelado de Datos: Montaje de infraestructura y desarrollo de pipelines ETL.
+Modelo Entidad-Relación o No-Relacional: Diseño detallado del modelo o justificación de modelo no relacional.
+Análisis Exhaustivo en Muestra Representativa de Datos: Identificación de valores atípicos, distribuciones y correlaciones.
+Diseño de Dashboard (Prueba de Concepto) o Producto de ML (MVP): Versión simplificada del dashboard o producto de ML con datos de muestra.
+Hitos y Entregables: ETL completo, Estructura de datos implementada, Pipeline ETL automatizado, Diseño del Modelo ER, Pipelines para alimentar el DW, Data Warehouse, Validación de datos, Documentación detallada.
+📈 Sprint #3: Data Analytics + ML (Semana 3)
+
+Desarrollo de Dashboard Interactivo y Análisis de Datos: Creación de un dashboard interactivo y análisis de datos.
+Implementación de Modelos de ML (si aplica): Producto/s de ML, Modelo/s de ML en producción.
+Diseño de Reportes/Dashboards y KPIs: Finalización del dashboard, KPIs e informe de análisis.
+Entregables Finales: Dashboard final, Producto/s de ML, Documentación y reporte final.
 
 ### Alcance Espacial
 Se realizó una delimitación espacial del proyecto mediante un análisis georreferencial utilizando Google Maps para mapear las ubicaciones de las franquicias existentes del cliente, que se concentran principalmente en las costas este y oeste de los EE. UU.
