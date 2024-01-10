@@ -120,6 +120,47 @@ La importancia y relevancia de este proyecto radica en que se busca aportar al c
 <!-- KPIs section -->
 ## KPIs
 
+### 1. Satisfacción al cliente
+Mide el grado de satisfacción de los clientes con los restaurantes de comida saludable y afines, utilizando la cantidad de reseñas positivas como indicador. Este KPI es importante porque refleja la calidad del servicio y la fidelización de los clientes, y puede influir en la reputación y la rentabilidad de los negocios.
+
+* **Métrica**: Cantidad de reseñas positivas
+* **Objetivo**: Aumentar 10% las reseñas positivas trismetralmente.
+
+$$
+\mathrm{KPI}=\dfrac{R_{positivos}}{R_{total}}\cdot100
+$$
+
+
+### 2. Cantidad de interacciones por sucursal
+
+* **Métrica**: Cantidad de interacciones en las sucursales. Cantidad total de reseñas por sucursales/cantidad total de reseñas.
+* **Objetivo**: Aumentar 5% las reseñas positivas por sucursal mensualmente.
+
+$$
+\mathrm{KPI}=\dfrac{R_{sucursal}}{R_{total}}\cdot100
+$$
+
+
+### 3. Satisfacción del cliente respecto al servicio
+
+* **Métrica**: Cantidad de comentarios positivos respecto al servicio sobre cantidad de comentarios totales respecto al servicio.
+* **Objetivo**: Aumentar 5% la cantidad de comentarios positivos por servicio mensualmente.
+
+$$
+\mathrm{KPI}=\dfrac{R_{servicio}^{+}}{R_{totalservicio}}\cdot100
+$$
+
+
+### 4. Oferta/Demanda de comida saludable
+
+* **Métrica**: Cantidad de total de restaurantes de comida saludable/cantidad de total de reseñas de restaurantes de comida saludable por localidad.
+* **Objetivo**: Identificar el top 3 de localidades potenciales por estado.
+
+
+$$
+\mathrm{KPI}=\dfrac{Total_{restaurantes}}{R_{total}}\cdot100
+$$
+
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
 <!-- scope section -->
