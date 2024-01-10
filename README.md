@@ -121,7 +121,6 @@ La importancia y relevancia de este proyecto radica en que se busca aportar al c
 ## KPIs
 
 ### 1. Satisfacción al cliente
-Mide el grado de satisfacción de los clientes con los restaurantes de comida saludable y afines, utilizando la cantidad de reseñas positivas como indicador. Este KPI es importante porque refleja la calidad del servicio y la fidelización de los clientes, y puede influir en la reputación y la rentabilidad de los negocios.
 
 * **Métrica**: Cantidad de reseñas positivas
 * **Objetivo**: Aumentar 10% las reseñas positivas trismetralmente.
@@ -160,6 +159,8 @@ $$
 $$
 \mathrm{KPI}=\dfrac{Total_{restaurantes}}{R_{total}}\cdot100
 $$
+
+Para más información sobre el criterio empleado para la construcción de los KPIs puedes consultar la documentación asociada en la sección [KPIs](https://github.com/Insights-Labs-Consultant-Agency/yelp-google-maps-reviews-and-recommendations/wiki/KPIs) de la wiki.
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
