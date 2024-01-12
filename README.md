@@ -119,22 +119,22 @@ La importancia y relevancia de este proyecto radica en que se busca aportar al c
 
 <!-- KPIs section -->
 ## KPIs
-# KPI 1 Satisfaccion al cliente
+_KPI 1 Satisfaccion al cliente
 Nos permite evaluar directamente la percepción general de los clientes sobre nuestros servicios.
 Metrica: cantidad de reseñas positivas que recibe el cliente.
 Objetivo: aumentar un 10% las mismas en periodo trimestrales.
 
-# KPI 2 Cantidad de Reseñas por Sucursal
+-KPI 2 Cantidad de Reseñas por Sucursal
 Nos permite comprender cómo cada sucursal está siendo percibida por los clientes y a identificar áreas de mejora a nivel local.
 Métrica: Cantidad de interacciones en las sucursales. Cantidad total de reseñas por sucursales/cantidad total de reseñas.
 Objetivo: incrementar un 5% las reseñas positivas mensualmente.
 
-# KPI 3 Satisfacción del Cliente respecto al Servicio
+-KPI 3 Satisfacción del Cliente respecto al Servicio
 Nos permite comprender en detalle los aspectos específicos de nuestros servicios, que impactan en la experiencia del cliente.
 Metrica: Cantidad de comentarios negativos o positivos respecto al servicio sobre cantidad de comentarios totales.
 Objetivo: aumentar un 5% los comentarios positivos y disminuir 5% la cantidad de comentarios negativos mensualmente.
 
-# KPI 4 Oferta/Demanda de comida saludable
+_KPI 4 Oferta/Demanda de comida saludable
 Nos permite tomar decisiones estratégicas, sobre la expansión de nuestra oferta de comida vegetaría/vegana en áreas con alta demanda relativa.
 Metrica: Cantidad de restaurantes de comida saludable/cantidad de reseñas de comida saludable por estado.
 Objetivo: identificar el top 3 de ciudades potenciales por estado basados en esta métrica.
