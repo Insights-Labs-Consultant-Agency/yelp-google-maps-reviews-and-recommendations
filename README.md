@@ -50,7 +50,7 @@
     <li>
       <a href="#alcance">Alcance</a>
       <ul>
-        <li><a href="#alcance-temporal">Alcance Temporal</a></li>
+<!--         <li><a href="#alcance-temporal">Alcance Temporal</a></li> -->
         <li><a href="#alcance-espacial">Alcance Espacial</a></li>
       </ul>
     </li>
@@ -120,12 +120,54 @@ La importancia y relevancia de este proyecto radica en que se busca aportar al c
 <!-- KPIs section -->
 ## KPIs
 
+### 1. Satisfacción al cliente
+
+* **Métrica**: Cantidad de reseñas positivas
+* **Objetivo**: Aumentar 10% las reseñas positivas trismetralmente.
+
+$$
+\mathrm{KPI}=\dfrac{R_{positivos}}{R_{total}}\cdot100
+$$
+
+
+### 2. Cantidad de interacciones por sucursal
+
+* **Métrica**: Cantidad de interacciones en las sucursales. Cantidad total de reseñas por sucursales/cantidad total de reseñas.
+* **Objetivo**: Aumentar 5% las reseñas positivas por sucursal mensualmente.
+
+$$
+\mathrm{KPI}=\dfrac{R_{sucursal}}{R_{total}}\cdot100
+$$
+
+
+### 3. Satisfacción del cliente respecto al servicio
+
+* **Métrica**: Cantidad de comentarios positivos respecto al servicio sobre cantidad de comentarios totales respecto al servicio.
+* **Objetivo**: Aumentar 5% la cantidad de comentarios positivos por servicio mensualmente.
+
+$$
+\mathrm{KPI}=\dfrac{R_{servicio}^{+}}{R_{totalservicio}}\cdot100
+$$
+
+
+### 4. Oferta/Demanda de comida saludable
+
+* **Métrica**: Cantidad de total de restaurantes de comida saludable/cantidad de total de reseñas de restaurantes de comida saludable por localidad.
+* **Objetivo**: Identificar el top 3 de localidades potenciales por estado.
+
+
+$$
+\mathrm{KPI}=\dfrac{Total_{restaurantes}}{R_{total}}\cdot100
+$$
+
+Para más información sobre el criterio empleado para la construcción de los KPIs puedes consultar la documentación asociada en la sección [KPIs](https://github.com/Insights-Labs-Consultant-Agency/yelp-google-maps-reviews-and-recommendations/wiki/KPIs) de la wiki.
+
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
 <!-- scope section -->
 ## Alcance
 
-### Alcance Temporal
+<!-- ### Alcance Temporal -->
 
 ### Alcance Espacial
 Se realizó una delimitación espacial del proyecto mediante un análisis georreferencial utilizando Google Maps para mapear las ubicaciones de las franquicias existentes del cliente, que se concentran principalmente en las costas este y oeste de los EE. UU.
