@@ -50,7 +50,7 @@
     <li>
       <a href="#alcance">Alcance</a>
       <ul>
-        <li><a href="#alcance-temporal">Alcance Temporal</a></li>
+<!--         <li><a href="#alcance-temporal">Alcance Temporal</a></li> -->
         <li><a href="#alcance-espacial">Alcance Espacial</a></li>
       </ul>
     </li>
@@ -167,7 +167,7 @@ Para más información sobre el criterio empleado para la construcción de los K
 <!-- scope section -->
 ## Alcance
 
-### Alcance Temporal
+<!-- ### Alcance Temporal -->
 
 ### Alcance Espacial
 Se realizó una delimitación espacial del proyecto mediante un análisis georreferencial utilizando Google Maps para mapear las ubicaciones de las franquicias existentes del cliente, que se concentran principalmente en las costas este y oeste de los EE. UU.
