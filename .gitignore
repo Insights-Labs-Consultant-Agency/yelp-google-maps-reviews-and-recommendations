@@ -129,7 +129,7 @@ env.bak/
 venv.bak/
 
 # Streamlit
-app/.streamlit/secrets.toml
+.streamlit/secrets.toml
 app/data
 
 # Spyder project settings
