@@ -4,7 +4,7 @@ from streamlit_extras.switch_page_button import switch_page
 
 # Logo de la página
 def logo():
-    add_logo("assets/yoogle-icon.png", height=300)
+    add_logo("app/assets/yoogle-icon.png", height=300)
 
 # Boton para cambiar de página 
 def switch_page():
