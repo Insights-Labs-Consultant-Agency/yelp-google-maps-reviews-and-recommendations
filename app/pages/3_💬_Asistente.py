@@ -3,12 +3,30 @@ import os
 import joblib
 import streamlit as st
 import google.generativeai as genai
+from utils import logo
+
 # from dotenv import load_dotenv
 # load_dotenv()
 # GOOGLE_API_KEY=os.environ.get('GOOGLE_API_KEY')
 # genai.configure(api_key=GOOGLE_API_KEY)
 
 genai.configure(api_key=st.secrets["google"]["api_key"])
+
+st.set_page_config(
+    page_title="Asistente Virtual",
+    page_icon="💬",
+    menu_items={
+    "Get help": "https://github.com/Insights-Labs-Consultant-Agency/yelp-google-maps-reviews-and-recommendations/wiki",
+    "Report a bug": "https://github.com/Insights-Labs-Consultant-Agency/yelp-google-maps-reviews-and-recommendations/issues/new",
+    "About": """
+        ## Yoogle
+        
+        **GitHub**: https://github.com/Insights-Labs-Consultant-Agency
+    """
+    }
+)
+
+logo()
 
 new_chat_id = f'{time.time()}'
 MODEL_ROLE = 'ai'
@@ -29,28 +47,29 @@ except:
 
 # Sidebar allows a list of past chats
 with st.sidebar:
-    st.write('# Past Chats')
+    st.write('# Historial')
     if st.session_state.get('chat_id') is None:
         st.session_state.chat_id = st.selectbox(
-            label='Pick a past chat',
+            label='Elige un chat anterior',
             options=[new_chat_id] + list(past_chats.keys()),
-            format_func=lambda x: past_chats.get(x, 'New Chat'),
+            format_func=lambda x: past_chats.get(x, 'Nuevo chat'),
             placeholder='_',
         )
     else:
         # This will happen the first time AI response comes in
         st.session_state.chat_id = st.selectbox(
-            label='Pick a past chat',
+            label='Elige un chat anterior',
             options=[new_chat_id, st.session_state.chat_id] + list(past_chats.keys()),
             index=1,
-            format_func=lambda x: past_chats.get(x, 'New Chat' if x != st.session_state.chat_id else st.session_state.chat_title),
+            format_func=lambda x: past_chats.get(x, 'Nuevo chat' if x != st.session_state.chat_id else st.session_state.chat_title),
             placeholder='_',
         )
     # Save new chats after a message has been sent to AI
     # TODO: Give user a chance to name chat
     st.session_state.chat_title = f'ChatSession-{st.session_state.chat_id}'
 
-st.write('# Chat with Gemini')
+st.title("💬 Asistente Virtual")
+st.caption("🚀 powered by Gemini Pro")
 
 # Chat history (allows to ask multiple questions)
 try:
@@ -79,7 +98,7 @@ for message in st.session_state.messages:
         st.markdown(message['content'])
 
 # React to user input
-if prompt := st.chat_input('Your message here...'):
+if prompt := st.chat_input('Tu mensaje aquí...'):
     # Save this as a chat for later
     if st.session_state.chat_id not in past_chats.keys():
         past_chats[st.session_state.chat_id] = st.session_state.chat_title
