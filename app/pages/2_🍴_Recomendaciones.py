@@ -17,4 +17,4 @@ st.set_page_config(
 
 logo()
 
-st.write("# Recomendaciones 🍴")
+st.title("🍴 Recomendaciones")

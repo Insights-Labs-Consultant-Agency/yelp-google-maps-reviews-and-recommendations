@@ -24,7 +24,7 @@ def get_gemini_response(input, image):
         response = model.generate_content(image)
     return response.text
 
-# Initialize our streamlit app
+# Initialize streamlit app
 
 
 st.set_page_config(
@@ -43,8 +43,10 @@ st.set_page_config(
 
 logo()
 
-st.header("Generador de Recetas")
+st.title("🥗 Generador de Recetas")
+st.caption("🚀 powered by Gemini Pro + Vision")
 st.markdown("Sube la foto de un plato saludable y obtén la receta para prepararlo....")
+
 #input = st.text_input("Input Prompt: ", key="input")
 input = "Puedes generar la receta para el plato de la imagen. La receta debe incluir El nombre del plato, La lista de ingredientes, Los pasos de preparación y La información nutricional."
 uploaded_file = st.file_uploader(

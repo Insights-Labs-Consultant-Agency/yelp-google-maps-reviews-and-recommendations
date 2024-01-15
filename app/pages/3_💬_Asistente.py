@@ -14,7 +14,7 @@ genai.configure(api_key=st.secrets["google"]["api_key"])
 
 st.set_page_config(
     page_title="Asistente Virtual",
-    page_icon="🗨",
+    page_icon="💬",
     menu_items={
     "Get help": "https://github.com/Insights-Labs-Consultant-Agency/yelp-google-maps-reviews-and-recommendations/wiki",
     "Report a bug": "https://github.com/Insights-Labs-Consultant-Agency/yelp-google-maps-reviews-and-recommendations/issues/new",
@@ -68,7 +68,8 @@ with st.sidebar:
     # TODO: Give user a chance to name chat
     st.session_state.chat_title = f'ChatSession-{st.session_state.chat_id}'
 
-st.write('# Asistente Virtual')
+st.title("💬 Asistente Virtual")
+st.caption("🚀 powered by Gemini Pro")
 
 # Chat history (allows to ask multiple questions)
 try:
