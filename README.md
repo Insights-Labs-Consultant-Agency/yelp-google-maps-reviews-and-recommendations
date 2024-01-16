@@ -249,17 +249,17 @@ Distribuido bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para m√
 
 
 <!-- team section -->
-## Nuestro Equipo
+## Nuestro Equipo 
 
-| Equipo              | Rol            | Nombre                | Contacto |
-|-------------------- | -------------- | --------------------- | -------- |
-| Data Infrastructure | Data Engineer  | Jimmy Pachon          | [![LinkedIn][linkedin-shield]][linkedin-pachon]  |
-| Data Research       | Data Analyst   | Freddy Ampueda        | [![LinkedIn][linkedin-shield]][linkedin-ampueda] |
-| Machine Learning    | Data Scientist | Freddy Pinto          | [![LinkedIn][linkedin-shield]][linkedin-pizarro] |
-| Data Visualization  | Data Analyst   | Javier Pizarro        | [![LinkedIn][linkedin-shield]][linkedin-pinto]   |
-| Data Visualization  | Data Analyst   | Cristopher Morales    | [![LinkedIn][linkedin-shield]][linkedin-morales] |
-<!-- | Project Management  | Scrum Master   | Maximiliano Vaca Coll |           | -->
-<!-- |                     | Product Owner  |                       |           | -->
+| Equipo              | Rol            |   |  Nombre              | Contacto | |
+|-------------------- | -------------- | - |--------------------- | -------- |-|
+| Data Infrastructure | Data Engineer  | <img src="https://avatars.githubusercontent.com/u/140009843?v=4" width=48 style="border-radius:50%"> | Jimmy Pachon          | [![LinkedIn][linkedin-shield]][linkedin-pachon]  | [![GitHub][github-shield]][github-pachon] |
+| Data Research       | Data Analyst   | <img src="https://avatars.githubusercontent.com/u/110296341?v=4" width=48 style="border-radius:50%"> | Freddy Ampueda        | [![LinkedIn][linkedin-shield]][linkedin-ampueda] | [![GitHub][github-shield]][github-ampueda] |
+| Machine Learning    | Data Scientist | <img src="https://avatars.githubusercontent.com/u/78459929?v=4" width=48 style="border-radius:50%">  | Freddy Pinto          | [![LinkedIn][linkedin-shield]][linkedin-pinto]   | [![GitHub][github-shield]][github-pinto]  |
+| Data Visualization  | Data Analyst   | <img src="https://avatars.githubusercontent.com/u/90941874?v=4" width=48 style="border-radius:50%"> | Javier Pizarro        | [![LinkedIn][linkedin-shield]][linkedin-pizarro] | [![GitHub][github-shield]][github-pizarro] |
+| Data Visualization  | Data Analyst   | <img src="https://avatars.githubusercontent.com/u/45972845?v=4" width=48 style="border-radius:50%"> | Cristopher Morales    | [![LinkedIn][linkedin-shield]][linkedin-morales] | [![GitHub][github-shield]][github-morales] |
+<!-- | Project Management  | Scrum Master   |  |Maximiliano Vaca Coll |       ||
+| Project Management  | Product Owner  | |Angela Aguirre         |       || -->
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
@@ -303,3 +303,9 @@ Queremos agradecer a las siguientes personas y recursos que nos han ayudado a re
 [linkedin-pizarro]: https://www.linkedin.com/in/javier-pizarro-187766111/
 [linkedin-pinto]: https://www.linkedin.com/in/FreddyPinto-/
 [linkedin-morales]: https://www.linkedin.com/in/cristopher-morales-04b67616b/
+[github-shield]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
+[github-pachon]: https://github.com/JimmyPachon
+[github-ampueda]: https://github.com/ampuedaf
+[github-pizarro]: https://github.com/cjpizarroz
+[github-pinto]: https://www.linkedin.com/in/FreddyPinto-/
+[github-morales]: https://github.com/eristofferius/
