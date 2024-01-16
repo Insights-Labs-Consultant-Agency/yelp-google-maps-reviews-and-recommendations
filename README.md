@@ -76,7 +76,7 @@
   <img src="images/screenshot-api-home.png" alt="screenshot"/>
 </p> -->
 
-Este proyecto corresponde al Proyecto Final de la etapa de Labs del programa de Data Science de SoyHenry, donde se trata de analizar el mercado estadounidense de comida vegetariana y afines, usando datos de Yelp y Google Maps. Se busca entender las opiniones y preferencias de los usuarios de ambas plataformas, así como las tendencias y oportunidades de negocio en el sector. El objetivo es crear data products que permitan realizar análisis de sentimientos, predecir el crecimiento o decrecimiento del rubro de comida vegetariana y afines, sugerir las mejores ubicaciones para los nuevos locales, y crear un sistema de recomendación de restaurantes personalizado y un asistente virtual para los usuarios.
+Este proyecto corresponde al Proyecto Final de la etapa de Labs del programa de Data Science de Henry, donde se trata de analizar el mercado estadounidense de comida vegetariana y afines, usando datos de Yelp y Google Maps. Se busca entender las opiniones y preferencias de los usuarios de ambas plataformas, así como las tendencias y oportunidades de negocio en el sector. El objetivo es crear data products que permitan realizar análisis de sentimientos, predecir el crecimiento o decrecimiento del rubro de comida vegetariana y afines, sugerir las mejores ubicaciones para los nuevos locales, crear un sistema de recomendación de restaurantes personalizado, un asistente virtual para los usuarios y un generador de recetas vegetarianas y/o saludables.
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
@@ -282,6 +282,13 @@ Queremos agradecer a las siguientes personas y recursos que nos han ayudado a re
 * A la comunidad de Henry, especialmente a [Maximiliano Vaca Coll]() que nos ha apoyado y guiado durante el proceso de desarrollo de este proyecto.
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p> -->
+
+
+<!-- Disclaimer -->
+>[!WARNING]
+ Disclaimer: Este proyecto es un trabajo académico realizado como parte del Proyecto Final de la etapa de Labs del programa de Data Science de Henry, una organización educativa que ofrece bootcamps de programación y ciencia de datos. El objetivo del proyecto es aplicar los conocimientos adquiridos en el programa y desarrollar habilidades de análisis de datos, visualización, machine learning y creación de data products. El proyecto no tiene fines comerciales ni representa la opinión o el interés de Henry o de sus socios. Los datos utilizados en el proyecto provienen de fuentes públicas y no se garantiza su veracidad, exactitud, o actualidad. El nombre del producto (Yoogle) y de la consultora (Insights Labs) son ficticios y no tienen ninguna relación con empresas o marcas reales. Los resultados y recomendaciones obtenidos en el proyecto son meramente ilustrativos y no deben ser tomados como base para la toma de decisiones de inversión, expansión, o consumo. El proyecto no promueve ni desalienta ningún tipo de dieta, estilo de vida, o preferencia alimentaria. Cualquier coincidencia con hechos o personas reales es pura casualidad.
+
+<p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
