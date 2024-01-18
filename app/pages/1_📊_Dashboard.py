@@ -32,7 +32,7 @@ html_code = """
         overflow: hidden;
     ">
         <iframe
-            src="https://us-east-2.quicksight.aws.amazon.com/sn/embed/share/accounts/018079189591/dashboards/1077495c-a58e-4910-a34e-909e4780fb9d?directory_alias=insights-labs-quicksight"
+            src="https://us-east-2.quicksight.aws.amazon.com/sn/embed/share/accounts/018079189591/dashboards/85c5c680-f2d0-4a84-b6d0-7d8f24414031?directory_alias=insights-labs-quicksight">
             style="
                 position: absolute;
                 top: 0;
@@ -44,6 +44,7 @@ html_code = """
         </iframe>
     </div>
 """
+
 
 # Inserta el dashboard de QuickSight en la aplicación de Streamlit
 components.html(html_code, height=720)
