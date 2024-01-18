@@ -1,23 +1,42 @@
 import streamlit as st
 from streamlit_extras.app_logo import add_logo
-from streamlit_extras.switch_page_button import switch_page
+# from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
+import os
+import google.generativeai as genai
+from dotenv import load_dotenv
 
+# Carga las variables de entorno
+load_dotenv()
 
-# Logo de la página
+# Obtiene la clave de la API de Google de las variables de entorno
+GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+
+# Configura la librería de Google IA con la clave de la API
+genai.configure(api_key=GOOGLE_API_KEY)
+
+# Función para cargar el logo de la página en el sidebar
 def logo():
-    add_logo("app/assets/yoogle-icon.png", height=300)
+    add_logo("assets/yoogle-icon.png", height=300)
 
 
 # Boton para cambiar de página 
-def switch_page():
-    asistente = st.button("Asistente")
-    recetas = st.button("Recetas")
-    if asistente:
-        switch_page("Asistente")
-    if recetas:
-        switch_page("Recetas")
+# def switch_page():
+#     asistente = st.button("Asistente")
+#     recetas = st.button("Recetas")
+#     if asistente:
+#         switch_page("Asistente")
+#     if recetas:
+#         switch_page("Recetas")
 
+# Función para cargar Gemini Pro Vision model y generar respuesta
+def get_gemini_response(input, image):
+    model = genai.GenerativeModel('gemini-pro-vision')
+    if input != "":
+        response = model.generate_content([input, image])
+    else:
+        response = model.generate_content(image)
+    return response.text
 
 def quicksight_dashboard():
     # Código HTML del dashboard de QuickSight

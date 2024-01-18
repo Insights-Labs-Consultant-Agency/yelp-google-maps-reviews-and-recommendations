@@ -4,14 +4,18 @@ import joblib
 import streamlit as st
 import google.generativeai as genai
 from utils import logo
+from dotenv import load_dotenv
 
-# from dotenv import load_dotenv
-# load_dotenv()
-# GOOGLE_API_KEY=os.environ.get('GOOGLE_API_KEY')
-# genai.configure(api_key=GOOGLE_API_KEY)
+# Carga las variables de entorno
+load_dotenv()
 
-genai.configure(api_key=st.secrets["google"]["api_key"])
+# Obtiene la clave de la API de Google de las variables de entorno
+GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 
+# Configura la librería de Google IA con la clave de la API
+genai.configure(api_key=GOOGLE_API_KEY)
+
+# Configuración de la página de Streamlit
 st.set_page_config(
     page_title="Asistente Virtual",
     page_icon="💬",
@@ -26,13 +30,15 @@ st.set_page_config(
     }
 )
 
+# Agregar el logotipo a la barra lateral
 logo()
 
+# Configuración de la sesión
 new_chat_id = f'{time.time()}'
 MODEL_ROLE = 'ai'
 AI_AVATAR_ICON = '✨'
 
-# Create a data/ folder if it doesn't already exist
+# Crear una carpeta data si aún no existe
 try:
     os.mkdir('data/')
 except:
