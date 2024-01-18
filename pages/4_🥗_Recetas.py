@@ -41,6 +41,6 @@ if uploaded_file is not None:
         st.write('Receta generada con exito!')
         st.subheader("La receta es")
         st.write(response)
-else:
-    st.write('Por favor, sube una imagen para generar la receta.')
+# else:
+#     st.write('Por favor, sube una imagen para generar la receta.')
 
