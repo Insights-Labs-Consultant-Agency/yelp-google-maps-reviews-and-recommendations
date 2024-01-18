@@ -24,21 +24,36 @@ st.title("📊 Dashboard ")
 
 # Código HTML del dashboard de QuickSight
 html_code = """
-    <div style="
-        position: relative;
-        padding-bottom: 56.25%; /* Proporción 16:9 */
-        height: 0;
-        overflow: hidden;
-    ">   
-    <iframe
-        width="1220"
-        height="720"
-        src="https://us-east-2.quicksight.aws.amazon.com/sn/embed/share/accounts/018079189591/dashboards/85c5c680-f2d0-4a84-b6d0-7d8f24414031?directory_alias=insights-labs-quicksight">
-    </iframe>
+<html>
+<head>
+    <style>
+        .iframe-container {
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 */
+            position: relative;
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="iframe-container">
+        <iframe src="https://us-east-2.quicksight.aws.amazon.com/sn/embed/share/accounts/018079189591/dashboards/85c5c680-f2d0-4a84-b6d0-7d8f24414031?directory_alias=insights-labs-quicksight" frameborder="0" allowfullscreen></iframe>
     </div>
+</body>
+</html>
 """
 
-
+# width="1220"
+# height="720"
 # # Código HTML del dashboard de PowerBI
 # html_code = """
 #     <div style="
