@@ -73,8 +73,8 @@ def get_item_details(df):
 
 # Funcion para agregar logo al sidebar de la página
 def logo():
-    # add_logo("app/assets/yoogle-icon.png", height=300)
-    add_logo("assets/yoogle-icon.png", height=300)
+    add_logo("app/assets/yoogle-icon.png", height=300)
+    # add_logo("assets/yoogle-icon.png", height=300)
 
 # Funcion para cargar el modelo Gemini Pro + Vision y obtener una respuesta
 def get_gemini_response(input, image):
