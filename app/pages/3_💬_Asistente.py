@@ -5,13 +5,11 @@ import streamlit as st
 import google.generativeai as genai
 from utils import logo
 
-# from dotenv import load_dotenv
-# load_dotenv()
-# GOOGLE_API_KEY=os.environ.get('GOOGLE_API_KEY')
-# genai.configure(api_key=GOOGLE_API_KEY)
-
+# Obtiene la api key de google generative ai del archivo secrets.toml
 genai.configure(api_key=st.secrets["google"]["api_key"])
 
+
+# Configuración de la pagina
 st.set_page_config(
     page_title="Asistente Virtual",
     page_icon="💬",
@@ -26,26 +24,28 @@ st.set_page_config(
     }
 )
 
+# Carga el logo al sidebar
 logo()
 
+# Inicializa un nuevo chat
 new_chat_id = f'{time.time()}'
 MODEL_ROLE = 'ai'
 AI_AVATAR_ICON = '✨'
 
-# Create a data/ folder if it doesn't already exist
+# Crea el directorio data/ si no existe
 try:
     os.mkdir('data/')
 except:
-    # data/ folder already exists
+    # Si el directorio ya existe
     pass
 
-# Load past chats (if available)
+# Carga los mensajes del chat (si estan disponibles)
 try:
     past_chats: dict = joblib.load('data/past_chats_list')
 except:
     past_chats = {}
 
-# Sidebar allows a list of past chats
+# Permite al sidebar mostrar una lista de chats anteriores
 with st.sidebar:
     st.write('# Historial')
     if st.session_state.get('chat_id') is None:
@@ -56,7 +56,7 @@ with st.sidebar:
             placeholder='_',
         )
     else:
-        # This will happen the first time AI response comes in
+        # Esto sucederá la primera vez que llegue la respuesta de la IA
         st.session_state.chat_id = st.selectbox(
             label='Elige un chat anterior',
             options=[new_chat_id, st.session_state.chat_id] + list(past_chats.keys()),
@@ -64,14 +64,14 @@ with st.sidebar:
             format_func=lambda x: past_chats.get(x, 'Nuevo chat' if x != st.session_state.chat_id else st.session_state.chat_title),
             placeholder='_',
         )
-    # Save new chats after a message has been sent to AI
-    # TODO: Give user a chance to name chat
+    # Guarda nuevos chats después de que se haya enviado un mensaje a la IA
+    # TODO: Dar al usuario la oportunidad de nombrar el chat
     st.session_state.chat_title = f'ChatSession-{st.session_state.chat_id}'
 
 st.title("💬 Asistente Virtual")
 st.caption("🚀 powered by Gemini Pro")
 
-# Chat history (allows to ask multiple questions)
+# # Historial de chat (permite hacer múltiples preguntas))
 try:
     st.session_state.messages = joblib.load(
         f'data/{st.session_state.chat_id}-st_messages'
@@ -89,7 +89,7 @@ st.session_state.chat = st.session_state.model.start_chat(
     history=st.session_state.gemini_history,
 )
 
-# Display chat messages from history on app rerun
+# Muestra el historial de mensajes del chat al volver a ejecutar la aplicación
 for message in st.session_state.messages:
     with st.chat_message(
         name=message['role'],
@@ -97,28 +97,28 @@ for message in st.session_state.messages:
     ):
         st.markdown(message['content'])
 
-# React to user input
+# Reacciona al input del usuario
 if prompt := st.chat_input('Tu mensaje aquí...'):
-    # Save this as a chat for later
+    # Almacena el chat
     if st.session_state.chat_id not in past_chats.keys():
         past_chats[st.session_state.chat_id] = st.session_state.chat_title
         joblib.dump(past_chats, 'data/past_chats_list')
-    # Display user message in chat message container
+    # Mostrar el mensaje del usuario en el chat container
     with st.chat_message('user'):
         st.markdown(prompt)
-    # Add user message to chat history
+    # Agrega el mensaje del usuario al historial
     st.session_state.messages.append(
         dict(
             role='user',
             content=prompt,
         )
     )
-    ## Send message to AI
+    # Envia el mensaje al chat y obtiene la respuesta del modelo 
     response = st.session_state.chat.send_message(
         prompt,
         stream=True,
     )
-    # Display assistant response in chat message container
+    # Muesta la respuesta del modelo en el chat container 
     with st.chat_message(
         name=MODEL_ROLE,
         avatar=AI_AVATAR_ICON,
@@ -126,19 +126,19 @@ if prompt := st.chat_input('Tu mensaje aquí...'):
         message_placeholder = st.empty()
         full_response = ''
         assistant_response = response
-        # Streams in a chunk at a time
+        # Genera texto por fragmentos
         for chunk in response:
-            # Simulate stream of chunk
-            # TODO: Chunk missing `text` if API stops mid-stream ("safety"?)
+            # Simula flujo de texto como chatGPT
+            # TODO: Agregar validación por si la API se detiene a mitad de camino y le falta 'texto' a la respuesta 
             for ch in chunk.text.split(' '):
                 full_response += ch + ' '
                 time.sleep(0.05)
-                # Rewrites with a cursor at end
+                # Reescribe con un cursor al final
                 message_placeholder.write(full_response + '▌')
-        # Write full message with placeholder
+        # Escribe el mensaje completo con placeholder
         message_placeholder.write(full_response)
 
-    # Add assistant response to chat history
+    # Agrega el mensaje del modelo al historial del chat
     st.session_state.messages.append(
         dict(
             role=MODEL_ROLE,
@@ -147,7 +147,7 @@ if prompt := st.chat_input('Tu mensaje aquí...'):
         )
     )
     st.session_state.gemini_history = st.session_state.chat.history
-    # Save to file
+    # Guarda el archivo
     joblib.dump(
         st.session_state.messages,
         f'data/{st.session_state.chat_id}-st_messages',
