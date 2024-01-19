@@ -1,0 +1,25 @@
+credentials:
+  usernames:
+    freddy:
+      email: freddypinto@gmail.com
+      name: Freddy
+      password: $2b$12$W26vrUbMJDjuv5A1UK5uaO/UwSGlApTs/h0anlAV2W/8LEEHg4NGu
+    javier:
+      email: javier@gmail.com
+      name: Javier
+      password: $2b$12$ILkTZlgjTKq2bpOKz9MoT./xKp3i.yszLzw81Z0/IO8S7hqf8hvdK
+    cris:
+      email: freddypinto@gmail.com
+      name: Cristopher
+      password: $2b$12$2twTTNEBW1Mz7zmihHp3gOTzSzunlGTu/xhYZ88FzHUItAwQFl0Pu
+    rbriggs:
+      email: javier@gmail.com
+      name: Rebeca
+      password: $2b$12$1kCrhozNSWTBu0h6g6QuHOFKrkL5dVHnnD65xkG3uE.SHQJ4.8EKy  
+cookie:
+  expiry_days: 30
+  key: some_signature_key # Must be string
+  name: some_cookie_name
+preauthorized:
+  emails:
+  - admin@gmail.com
