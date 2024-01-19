@@ -1,32 +1,9 @@
-import google.generativeai as genai
-# from dotenv import load_dotenv
 import streamlit as st
-import os
 from PIL import Image
-from utils import logo
+from utils import logo, get_gemini_response
 
 
-# load_dotenv()  # Load environment variables from .env.
-
-
-# os.getenv("GOOGLE_API_KEY")
-# genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-
-genai.configure(api_key=st.secrets["google"]["api_key"])
-
-# Function to load Gemini Pro Vision model and get responses
-
-def get_gemini_response(input, image):
-    model = genai.GenerativeModel('gemini-pro-vision')
-    if input != "":
-        response = model.generate_content([input, image])
-    else:
-        response = model.generate_content(image)
-    return response.text
-
-# Initialize streamlit app
-
-
+# Configuración de la página
 st.set_page_config(
     page_title="Recetas",
     page_icon="🥗",
@@ -41,28 +18,32 @@ st.set_page_config(
     }
 )
 
+
+# Inserta el logo en el sidebar
 logo()
 
 st.title("🥗 Generador de Recetas")
 st.caption("🚀 powered by Gemini Pro + Vision")
 st.markdown("Sube la foto de un plato saludable y obtén la receta para prepararlo....")
 
+# 
 #input = st.text_input("Input Prompt: ", key="input")
 input = "Puedes generar la receta para el plato de la imagen. La receta debe incluir El nombre del plato, La lista de ingredientes, Los pasos de preparación y La información nutricional."
 uploaded_file = st.file_uploader(
     "Selecciona una imagen...", type=["jpg", "jpeg", "png"])
 image = ""
+
+# Genera la receta si se sube una imagen
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
     st.image(image, caption="Imagen cargada.", use_column_width=True)
 
-
-submit = st.button("Generar Receta")
-
-# If ask button is clicked
-
-if submit:
-
-    response = get_gemini_response(input, image)
-    st.subheader("La receta es")
-    st.write(response)
+    if st.button('Generar receta'):
+        st.write('Generando receta...')
+        # Si el botón de generar receta es cliqueado
+        response = get_gemini_response(input, image)
+        st.write('Receta generada con exito!')
+        st.subheader("La receta es")
+        st.write(response)
+# else:
+#     st.write('Por favor, sube una imagen para generar la receta.')

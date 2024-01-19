@@ -1,12 +1,27 @@
 import streamlit as st
+import google.generativeai as genai
 from streamlit_extras.app_logo import add_logo
 # from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
 
 
-# Logo de la página
+# Obtiene la api key desde el archivo secrets.toml
+genai.configure(api_key=st.secrets["google"]["api_key"])
+
+
+# Funcion para agregar logo al sidebar de la página
 def logo():
     add_logo("app/assets/yoogle-icon.png", height=300)
+
+
+# Funcion para cargar el modelo Gemini Pro + Vision y obtener una respuesta
+def get_gemini_response(input, image):
+    model = genai.GenerativeModel('gemini-pro-vision')
+    if input != "":
+        response = model.generate_content([input, image])
+    else:
+        response = model.generate_content(image)
+    return response.text
 
 
 # Boton para cambiar de página 
@@ -19,6 +34,7 @@ def logo():
 #         switch_page("Recetas")
 
 
+# Funcion para cargar el dashboard de QuickSight en la aplicación de Streamlit
 def quicksight_dashboard():
     # Código HTML del dashboard de QuickSight
     html_code = """
@@ -58,6 +74,8 @@ def quicksight_dashboard():
     components.html(html_code, height=720)
 
 
+
+# Funcion para cargar el dashboard de PowerBI en la aplicación de Streamlit
 # def powerbi_dashboard():
 # width="1220"
 # height="720"
