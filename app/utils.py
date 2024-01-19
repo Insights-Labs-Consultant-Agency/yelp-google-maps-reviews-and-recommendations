@@ -1,7 +1,6 @@
 import streamlit as st
-from streamlit_extras.app_logo import add_logo
-from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
+from streamlit_extras.app_logo import add_logo
 
 # Logo de la página
 def logo():
@@ -9,12 +8,17 @@ def logo():
 
 # Boton para cambiar de página 
 def switch_page():
-    asistente = st.button("Asistente")
-    recetas = st.button("Recetas")
-    if asistente:
-        switch_page("Asistente")
-    if recetas:
-        switch_page("Recetas")
+    cols = st.columns([2,5,1,7,1,4,1,4,2])
+    if cols[1].button(" 📊 Dashboard"):
+        st.switch_page("pages/1_📊_Dashboard.py")
+    if cols[3].button("🍴 Recomenndaciones"):
+        st.switch_page("pages/2_🍴_Recomendaciones.py")
+    if cols[5].button(" 💬 Asistente"):
+        st.switch_page("pages/3_💬_Asistente.py")
+    if cols[7].button("🥗 Recetas"):
+        st.switch_page("pages/4_🥗_Recetas.py")
+
+
 
 
 def quicksight_dashboard():
