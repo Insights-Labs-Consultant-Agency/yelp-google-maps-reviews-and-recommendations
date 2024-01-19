@@ -42,7 +42,7 @@ def quicksight_dashboard():
     </head>
     <body>
         <div class="iframe-container">
-            <iframe src="https://us-east-2.quicksight.aws.amazon.com/sn/embed/share/accounts/018079189591/dashboards/85c5c680-f2d0-4a84-b6d0-7d8f24414031?directory_alias=insights-labs-quicksight" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://us-east-2.quicksight.aws.amazon.com/sn/embed/share/accounts/018079189591/dashboards/ab6aa878-b1e5-4a5a-92db-4faea9ce0126?directory_alias=insights-labs-quicksight" frameborder="0" allowfullscreen></iframe>
         </div>
     </body>
     </html>
