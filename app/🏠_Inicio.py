@@ -11,7 +11,7 @@ with open('app/config.yaml') as file:
 # Configuración de la página
 st.set_page_config(
     page_title="Yoogle",
-    page_icon="assets/yoogle-favicon-32x32.png",
+    page_icon="app/assets/yoogle-favicon-32x32.png",
     menu_items={
     "Get help": "https://github.com/Insights-Labs-Consultant-Agency/yelp-google-maps-reviews-and-recommendations/wiki",
     "Report a bug": "https://github.com/Insights-Labs-Consultant-Agency/yelp-google-maps-reviews-and-recommendations/issues/new",
