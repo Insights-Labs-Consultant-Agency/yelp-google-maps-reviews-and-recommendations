@@ -1,5 +1,5 @@
 import streamlit as st
-from utils import logo, switch_page
+from utils import logo
 
 st.set_page_config(
     page_title="Yoogle",
