@@ -17,9 +17,12 @@ st.set_page_config(
     }
 )
 
+# Inserta el logo en el sidebar
 logo()
 
 st.title("📊 Dashboard ")
+st.caption("🚀 powered by Amazon QuickSight")
 
+# Inserta el dashboard de QuickSight
 quicksight_dashboard()
 
