@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_extras.app_logo import add_logo
-from streamlit_extras.switch_page_button import switch_page
+# from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
 
 
@@ -10,13 +10,13 @@ def logo():
 
 
 # Boton para cambiar de página 
-def switch_page():
-    asistente = st.button("Asistente")
-    recetas = st.button("Recetas")
-    if asistente:
-        switch_page("Asistente")
-    if recetas:
-        switch_page("Recetas")
+# def switch_page():
+#     asistente = st.button("Asistente")
+#     recetas = st.button("Recetas")
+#     if asistente:
+#         switch_page("Asistente")
+#     if recetas:
+#         switch_page("Recetas")
 
 
 def quicksight_dashboard():
@@ -47,7 +47,7 @@ def quicksight_dashboard():
             <iframe
             width: 100%;
             height: 100%; 
-            src="https://us-east-2.quicksight.aws.amazon.com/sn/embed/share/accounts/018079189591/dashboards/85c5c680-f2d0-4a84-b6d0-7d8f24414031?directory_alias=insights-labs-quicksight" frameborder="0" allowfullscreen>
+            src="https://us-east-2.quicksight.aws.amazon.com/sn/embed/share/accounts/018079189591/dashboards/ab6aa878-b1e5-4a5a-92db-4faea9ce0126?directory_alias=insights-labs-quicksight" frameborder="0" allowfullscreen>
             </iframe>
         </div>
     </body>
