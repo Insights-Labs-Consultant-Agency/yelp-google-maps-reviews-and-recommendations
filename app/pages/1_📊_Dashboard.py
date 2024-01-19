@@ -21,6 +21,7 @@ st.set_page_config(
 logo()
 
 st.title("📊 Dashboard ")
+st.caption("🚀 powered by Amazon QuickSight")
 
 # Inserta el dashboard de QuickSight
 quicksight_dashboard()

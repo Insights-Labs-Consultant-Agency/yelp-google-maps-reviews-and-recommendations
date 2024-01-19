@@ -1,24 +1,85 @@
 import streamlit as st
+import boto3
+import pandas as pd
+from pyathena import connect
 import streamlit.components.v1 as components
 from streamlit_extras.app_logo import add_logo
+
+
+# Accede a las credenciales de AWS desde st.secrets
+aws_access_key_id = st.secrets["aws"]["AWS_ACCESS_KEY_ID"]
+aws_secret_access_key = st.secrets["aws"]["AWS_SECRET_ACCESS_KEY"]
+region_name = st.secrets["aws"]["AWS_DEFAULT_REGION"]
+s3_staging_dir = st.secrets["aws"]["AWS_ATHENA_S3_STAGING_DIR"]
+campaign_arn = st.secrets["aws"]["AWS_campaign_arn"]
+
+
+# Inicializa el cliente de Amazon Personalize
+personalize = boto3.client('personalize', region_name=region_name, aws_access_key_id=aws_access_key_id,
+    aws_secret_access_key=aws_secret_access_key)
+
+personalize_runtime = boto3.client('personalize-runtime', region_name=region_name, aws_access_key_id=aws_access_key_id,
+    aws_secret_access_key=aws_secret_access_key)
+
+
+# Define el ARN de la campaña de Amazon Personalize
+campaign_arn = campaign_arn
+
+def get_recommendations(user_id):
+    # Obtiene las recomendaciones de Amazon Personalize
+    response = personalize_runtime.get_recommendations(
+        campaignArn = campaign_arn,
+        userId = str(user_id)
+    )
+    
+    # Extrae los IDs de los artículos recomendados
+    item_list = [item['itemId'] for item in response['itemList']]
+    
+    # Convierte la lista de IDs en un DataFrame de pandas
+    df = pd.DataFrame(item_list, columns=['Item ID'])
+    
+    return df.head()
+
+def get_item_details(df):
+    # Define la consulta SQL para obtener los datos de Athena
+    query = """
+    SELECT business_id, name, address, city, state, rating
+    FROM yelp.cleaned_business_yelp
+    WHERE business_id IN {}
+    """.format(tuple(df['Item ID'].tolist()))  # Reemplaza df con tu DataFrame
+
+    # Ejecuta la consulta en Amazon Athena
+    cursor = connect(aws_access_key_id=aws_access_key_id,
+                    aws_secret_access_key=aws_secret_access_key,
+                    s3_staging_dir=s3_staging_dir,
+                    region_name=region_name).cursor()
+    cursor.execute(query)
+
+    # Obtiene los resultados de la consulta y los almacena en un DataFrame de pandas
+    df_athena = pd.DataFrame(cursor.fetchall(), columns=['business_id','Restaurante', 'Dirección', 'Ciudad', 'Estado', 'Calificación'])
+
+    # Une el DataFrame original con el DataFrame de Athena
+    df_final = pd.merge(df, df_athena, left_on='Item ID', right_on='business_id')
+    df_final = df_final.drop(columns=['business_id','Item ID'])
+    return df_final
+
 
 # Logo de la página
 def logo():
     add_logo("assets/yoogle-icon.png", height=300)
+
 
 # Boton para cambiar de página 
 def switch_page():
     cols = st.columns([2,5,1,7,1,4,1,4,2])
     if cols[1].button(" 📊 Dashboard"):
         st.switch_page("pages/1_📊_Dashboard.py")
-    if cols[3].button("🍴 Recomenndaciones"):
+    if cols[3].button("🍴 Recomendaciones"):
         st.switch_page("pages/2_🍴_Recomendaciones.py")
     if cols[5].button(" 💬 Asistente"):
         st.switch_page("pages/3_💬_Asistente.py")
     if cols[7].button("🥗 Recetas"):
         st.switch_page("pages/4_🥗_Recetas.py")
-
-
 
 
 def quicksight_dashboard():
