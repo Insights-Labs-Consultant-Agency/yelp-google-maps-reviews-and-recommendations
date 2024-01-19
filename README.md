@@ -76,7 +76,7 @@
   <img src="images/screenshot-api-home.png" alt="screenshot"/>
 </p> -->
 
-Este proyecto corresponde al Proyecto Final de la etapa de Labs del programa de Data Science de SoyHenry, donde se trata de analizar el mercado estadounidense de comida vegetariana y afines, usando datos de Yelp y Google Maps. Se busca entender las opiniones y preferencias de los usuarios de ambas plataformas, así como las tendencias y oportunidades de negocio en el sector. El objetivo es crear data products que permitan realizar análisis de sentimientos, predecir el crecimiento o decrecimiento del rubro de comida vegetariana y afines, sugerir las mejores ubicaciones para los nuevos locales, y crear un sistema de recomendación de restaurantes personalizado y un asistente virtual para los usuarios.
+Este proyecto corresponde al Proyecto Final de la etapa de Labs del programa de Data Science de Henry, donde se trata de analizar el mercado estadounidense de comida vegetariana y afines, usando datos de Yelp y Google Maps. Se busca entender las opiniones y preferencias de los usuarios de ambas plataformas, así como las tendencias y oportunidades de negocio en el sector. El objetivo es crear data products que permitan realizar análisis de sentimientos, predecir el crecimiento o decrecimiento del rubro de comida vegetariana y afines, sugerir las mejores ubicaciones para los nuevos locales, crear un sistema de recomendación de restaurantes personalizado, un asistente virtual para los usuarios y un generador de recetas vegetarianas y/o saludables.
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
@@ -249,17 +249,17 @@ Distribuido bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para m�
 
 
 <!-- team section -->
-## Nuestro Equipo
+## Nuestro Equipo 
 
-| Equipo              | Rol            | Nombre                | Contacto |
-|-------------------- | -------------- | --------------------- | -------- |
-| Data Infrastructure | Data Engineer  | Jimmy Pachon          | [![LinkedIn][linkedin-shield]][linkedin-pachon]  |
-| Data Research       | Data Analyst   | Freddy Ampueda        | [![LinkedIn][linkedin-shield]][linkedin-ampueda] |
-| Machine Learning    | Data Scientist | Freddy Pinto          | [![LinkedIn][linkedin-shield]][linkedin-pizarro] |
-| Data Visualization  | Data Analyst   | Javier Pizarro        | [![LinkedIn][linkedin-shield]][linkedin-pinto]   |
-| Data Visualization  | Data Analyst   | Cristopher Morales    | [![LinkedIn][linkedin-shield]][linkedin-morales] |
-<!-- | Project Management  | Scrum Master   | Maximiliano Vaca Coll |           | -->
-<!-- |                     | Product Owner  |                       |           | -->
+| Equipo              | Rol            |   |  Nombre              | Contacto | |
+|-------------------- | -------------- | - |--------------------- | -------- |-|
+| Data Infrastructure | Data Engineer  | <img src="https://avatars.githubusercontent.com/u/140009843?v=4" width=48 style="border-radius:50%"> | Jimmy Pachon          | [![LinkedIn][linkedin-shield]][linkedin-pachon]  | [![GitHub][github-shield]][github-pachon] |
+| Data Research       | Data Analyst   | <img src="https://avatars.githubusercontent.com/u/110296341?v=4" width=48 style="border-radius:50%"> | Freddy Ampueda        | [![LinkedIn][linkedin-shield]][linkedin-ampueda] | [![GitHub][github-shield]][github-ampueda] |
+| Machine Learning    | Data Scientist | <img src="https://avatars.githubusercontent.com/u/78459929?v=4" width=48 style="border-radius:50%">  | Freddy Pinto          | [![LinkedIn][linkedin-shield]][linkedin-pinto]   | [![GitHub][github-shield]][github-pinto]  |
+| Data Visualization  | Data Analyst   | <img src="https://avatars.githubusercontent.com/u/90941874?v=4" width=48 style="border-radius:50%"> | Javier Pizarro        | [![LinkedIn][linkedin-shield]][linkedin-pizarro] | [![GitHub][github-shield]][github-pizarro] |
+| Data Visualization  | Data Analyst   | <img src="https://avatars.githubusercontent.com/u/45972845?v=4" width=48 style="border-radius:50%"> | Cristopher Morales    | [![LinkedIn][linkedin-shield]][linkedin-morales] | [![GitHub][github-shield]][github-morales] |
+<!-- | Project Management  | Scrum Master   |  |Maximiliano Vaca Coll |       ||
+| Project Management  | Product Owner  | |Angela Aguirre         |       || -->
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
@@ -284,6 +284,13 @@ Queremos agradecer a las siguientes personas y recursos que nos han ayudado a re
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p> -->
 
 
+<!-- Disclaimer -->
+>[!WARNING]
+ Disclaimer: Este proyecto es un trabajo académico realizado como parte del Proyecto Final de la etapa de Labs del programa de Data Science de Henry, una organización educativa que ofrece bootcamps de programación y ciencia de datos. El objetivo del proyecto es aplicar los conocimientos adquiridos en el programa y desarrollar habilidades de análisis de datos, visualización, machine learning y creación de data products. El proyecto no tiene fines comerciales ni representa la opinión o el interés de Henry o de sus socios. Los datos utilizados en el proyecto provienen de fuentes públicas y no se garantiza su veracidad, exactitud, o actualidad. El nombre del producto (Yoogle) y de la consultora (Insights Labs) son ficticios y no tienen ninguna relación con empresas o marcas reales. Los resultados y recomendaciones obtenidos en el proyecto son meramente ilustrativos y no deben ser tomados como base para la toma de decisiones de inversión, expansión, o consumo. El proyecto no promueve ni desalienta ningún tipo de dieta, estilo de vida, o preferencia alimentaria. Cualquier coincidencia con hechos o personas reales es pura casualidad.
+
+<p align="right">(<a href="#readme-top">volver arriba</a>)</p>
+
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/FreddyPinto/recsys-steam-games.svg?style=for-the-badge
@@ -303,3 +310,9 @@ Queremos agradecer a las siguientes personas y recursos que nos han ayudado a re
 [linkedin-pizarro]: https://www.linkedin.com/in/javier-pizarro-187766111/
 [linkedin-pinto]: https://www.linkedin.com/in/FreddyPinto-/
 [linkedin-morales]: https://www.linkedin.com/in/cristopher-morales-04b67616b/
+[github-shield]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
+[github-pachon]: https://github.com/JimmyPachon
+[github-ampueda]: https://github.com/ampuedaf
+[github-pizarro]: https://github.com/cjpizarroz
+[github-pinto]: https://www.linkedin.com/in/FreddyPinto-/
+[github-morales]: https://github.com/eristofferius/
