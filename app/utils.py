@@ -1,7 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
 from streamlit_extras.app_logo import add_logo
-# from streamlit_extras.switch_page_button import switch_page
 import streamlit.components.v1 as components
 
 
@@ -24,14 +23,17 @@ def get_gemini_response(input, image):
     return response.text
 
 
-# Boton para cambiar de página 
-# def switch_page():
-#     asistente = st.button("Asistente")
-#     recetas = st.button("Recetas")
-#     if asistente:
-#         switch_page("Asistente")
-#     if recetas:
-#         switch_page("Recetas")
+# Funcion para agregar botones de acceso directo
+def switch_page():
+    cols = st.columns([2,5,1,7,1,4,1,4,2])
+    if cols[1].button(" 📊 Dashboard"):
+        st.switch_page("pages/1_📊_Dashboard.py")
+    if cols[3].button("🍴 Recomenndaciones"):
+        st.switch_page("pages/2_🍴_Recomendaciones.py")
+    if cols[5].button(" 💬 Asistente"):
+        st.switch_page("pages/3_💬_Asistente.py")
+    if cols[7].button("🥗 Recetas"):
+        st.switch_page("pages/4_🥗_Recetas.py")
 
 
 # Funcion para cargar el dashboard de QuickSight en la aplicación de Streamlit
