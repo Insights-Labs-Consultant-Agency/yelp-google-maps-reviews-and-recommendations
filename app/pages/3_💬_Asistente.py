@@ -47,29 +47,28 @@ except:
 
 # Sidebar allows a list of past chats
 with st.sidebar:
-    st.write('# Historial')
+    st.write('# Past Chats')
     if st.session_state.get('chat_id') is None:
         st.session_state.chat_id = st.selectbox(
-            label='Elige un chat anterior',
+            label='Pick a past chat',
             options=[new_chat_id] + list(past_chats.keys()),
-            format_func=lambda x: past_chats.get(x, 'Nuevo chat'),
+            format_func=lambda x: past_chats.get(x, 'New Chat'),
             placeholder='_',
         )
     else:
         # This will happen the first time AI response comes in
         st.session_state.chat_id = st.selectbox(
-            label='Elige un chat anterior',
+            label='Pick a past chat',
             options=[new_chat_id, st.session_state.chat_id] + list(past_chats.keys()),
             index=1,
-            format_func=lambda x: past_chats.get(x, 'Nuevo chat' if x != st.session_state.chat_id else st.session_state.chat_title),
+            format_func=lambda x: past_chats.get(x, 'New Chat' if x != st.session_state.chat_id else st.session_state.chat_title),
             placeholder='_',
         )
     # Save new chats after a message has been sent to AI
     # TODO: Give user a chance to name chat
     st.session_state.chat_title = f'ChatSession-{st.session_state.chat_id}'
 
-st.title("💬 Asistente Virtual")
-st.caption("🚀 powered by Gemini Pro")
+st.write('# Chat with Gemini')
 
 # Chat history (allows to ask multiple questions)
 try:
@@ -98,7 +97,7 @@ for message in st.session_state.messages:
         st.markdown(message['content'])
 
 # React to user input
-if prompt := st.chat_input('Tu mensaje aquí...'):
+if prompt := st.chat_input('Your message here...'):
     # Save this as a chat for later
     if st.session_state.chat_id not in past_chats.keys():
         past_chats[st.session_state.chat_id] = st.session_state.chat_title
