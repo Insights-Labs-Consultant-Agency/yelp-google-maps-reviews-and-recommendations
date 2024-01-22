@@ -251,7 +251,7 @@ Distribuido bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para m√
 <!-- team section -->
 ## Nuestro Equipo 
 
-| Equipo              | Rol            |   |  Nombre              | Contacto | |
+| Equipo              | Rol            | Perfil  |  Nombre              | LinkedIn | GitHub |
 |-------------------- | -------------- | - |--------------------- | -------- |-|
 | Data Infrastructure | Data Engineer  | <img src="https://avatars.githubusercontent.com/u/140009843?v=4" width=48 style="border-radius:50%"> | Jimmy Pachon          | [![LinkedIn][linkedin-shield]][linkedin-pachon]  | [![GitHub][github-shield]][github-pachon] |
 | Data Research       | Data Analyst   | <img src="https://avatars.githubusercontent.com/u/110296341?v=4" width=48 style="border-radius:50%"> | Freddy Ampueda        | [![LinkedIn][linkedin-shield]][linkedin-ampueda] | [![GitHub][github-shield]][github-ampueda] |
